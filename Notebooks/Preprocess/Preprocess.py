@@ -160,3 +160,14 @@ def create_tags(x):
         if x in mapping[i]:
             return i
     return f'none yet - {x}'
+def extract_website(url: str, style=1):
+    if style == 1:
+        # Regular expression pattern to match the domain name
+        pattern = r"https?://(www\.)?([^/]+)"
+        match = re.match(pattern, url)
+        if match:
+            return match.group(2)
+    else :
+        domain = url.split(':')[1].strip('/').split('/')[0].strip('www.')
+        return domain
+
