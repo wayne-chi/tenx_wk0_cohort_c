@@ -8,14 +8,14 @@ This repo will hold all activity for week 0 cohort c of ten x program
 This project aims to empower businesses by providing actionable insights derived from the analysis of news articles using advanced natural language processing (NLP) techniques. By examining a wide range of news stories, we uncover critical trends, public sentiments, and emerging topics that can significantly influence business decisions. This project helps companies anticipate market shifts, refine marketing strategies, and understand the needs and preferences of their target audience.
 
 ## Directory Structure
-├── data/ │├── ... # Contains the datasets used for analysis \
-├── Notebooks/ │ 
--  ├── EDA.ipynb # Jupyter notebook for exploratory data analysis (EDA) │ 
--  ├── np.ipynb # Jupyter notebook for NLP implementation 
-
-├── .gitignore # Specifies files and directories to be ignored by Git \
+```
+├── data/  ... # Contains the datasets used for analysis 
+├── Notebooks
+|  ├── EDA.ipynb # Jupyter notebook for exploratory data analysis (EDA) 
+|  ├── nlp.ipynb # Jupyter notebook for NLP implementation 
+├── .gitignore # Specifies files and directories to be ignored by Git
 ├── README.md # Project documentation (this file)
-
+```
 ## Notebooks
 
 - **EDA.ipynb**: This notebook contains the exploratory data analysis (EDA) of the datasets. It provides insights into the structure and characteristics of the data, helping to inform the NLP methodologies applied later in the project.
