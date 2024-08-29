@@ -2,11 +2,65 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+
+# Define custom stop words list
+custom_stop_words = set(stopwords.words('english'))
+#  Function to preprocess text
+def preprocess_text_lemmatize(text):
+    import nltk
+    from nltk.corpus import stopwords
+    from nltk.tokenize import word_tokenize
+    from nltk.stem import WordNetLemmatizer
+    # Initialize WordNet Lemmatizer
+    lemmatizer = WordNetLemmatizer()
+
+    # Define custom stop words list
+    custom_stop_words = set(stopwords.words('english'))
+    # Tokenize text
+    tokens = word_tokenize(text)
+    
+    # Remove stop words and non-alphabetic tokens
+    tokens = [word.lower() for word in tokens if word.isalpha() and word.lower() not in custom_stop_words]
+    
+    # Lemmatize tokens
+    tokens = [lemmatizer.lemmatize(word) for word in tokens]
+    
+    # Join tokens back into text
+    preprocessed_text = ' '.join(tokens)
+    
+    return preprocessed_text
+
+
+# Function to preprocess text using stemming
+def preprocess_text_stemming(text):
+    import nltk
+    from nltk.corpus import stopwords
+    from nltk.tokenize import word_tokenize
+    from nltk.stem import WordNetLemmatizer
+    from nltk.stem import PorterStemmer
+
+    # Tokenize text
+    tokens = word_tokenize(text)
+    
+    # Remove stop words and non-alphabetic tokens
+    tokens = [word.lower() for word in tokens if word.isalpha() and word.lower() not in custom_stop_words]
+    
+    # Initialize Porter Stemmer
+    stemmer = PorterStemmer()
+    # Stem tokens
+    tokens = [stemmer.stem(word) for word in tokens]
+    
+    # Join tokens back into text
+    preprocessed_text = ' '.join(tokens)
+    
+    return preprocessed_text
+
+
 
 
 def create_tags(x):
