@@ -1,1 +1,5 @@
 
+## pending issues
+- lda model and lsi model does not load succesfully
+- retrain these models and save them in a format that allows them to be loaded well
+- general improvement of app and dashboard
