@@ -8,6 +8,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import re
 
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
 # Define custom stop words list
 custom_stop_words = set(stopwords.words('english'))
 #  Function to preprocess text

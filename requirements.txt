@@ -33,8 +33,6 @@ pandas==2.2.2
 psycopg2==2.9.9
 pyarrow==17.0.0
 pyparsing==3.1.4
-pytz==2024.1
-pywin32==306
 PyYAML==6.0.2
 regex==2024.7.24
 requests==2.32.3
@@ -61,4 +59,5 @@ xgboost==2.1.1
 xxhash==3.5.0
 yake==0.4.8
 yarl==1.9.4
-zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1724730934107/work
+python-dotenv
+plotly
