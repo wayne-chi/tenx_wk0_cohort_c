@@ -38,18 +38,18 @@ if 'top_n_keywords' not in st.session_state:
 # top_n_keywords
 # top_n_keywords
 
-nmf_vector_path = '../Models/nmf_tfidf_vectorizer.joblib'
-nmf_model_path = '../Models/nmf_model.joblib'
+nmf_vector_path = './Models/nmf_tfidf_vectorizer.joblib'
+nmf_model_path = './Models/nmf_model.joblib'
 
 # paths
-lsi_model_path = '../Models/lsi_model.gensim'
-lsi_vector_path = '../Models/lsi_dictionary.gensim'
+lsi_model_path = './Models/lsi_model.gensim'
+lsi_vector_path = './Models/lsi_dictionary.gensim'
 
-lda_model_path = '../Models/lda_model.joblib'
-lda_vector_path =  '../Models/lda_tfidf_vectorizer.joblib'
+lda_model_path = './Models/lda_model.joblib'
+lda_vector_path =  './Models/lda_tfidf_vectorizer.joblib'
 
 ## read data for lda pairs
-ndf = pd.read_csv('../data/lda_pair.csv')
+ndf = pd.read_csv('./data/lda_pair.csv')
 
 
 # 1. App Heading
@@ -94,11 +94,11 @@ if st.button("Predict", key='predict_button'):
     keyword_model = st.session_state['keyword_model']
     topN = st.session_state['top_n_keywords_1']
     if keyword_model == "YAKE":
-        m_path = '../Models/yake_params.json'
+        m_path = './Models/yake_params.json'
         extractor = LoadModels.YAKEExtractor(m_path,topN)
         
     else:
-        m_path = '../Models/keyword_extractor_tfidf_vectorizer.joblib'
+        m_path = './Models/keyword_extractor_tfidf_vectorizer.joblib'
         extractor = LoadModels.TfidfExtractor(m_path,topN)
 
     # text = st.session_state['article_text']
