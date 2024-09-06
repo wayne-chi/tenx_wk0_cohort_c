@@ -47,6 +47,37 @@ jupyter notebook
 
 ### Open and execute the cells in EDA.ipynb and np.ipynb as needed.
 
+## Topic Modelling Dashboard
+
+### Overview
+This dashboard is designed to assist with keyword extraction and topic modeling on uploaded text files. The app provides an interactive interface for users to select models, specify parameters, and visualize the results.
+
+### Screenshots
+#### Screenshot 1
+![Screenshot 1](./top_page_1_dashboard.png)
+
+#### Screenshot 2
+![Screenshot 2](./top_page_2_dashboard.png)
+
+### How to Use
+1. **Upload a Text File**: Use the "Upload text file" option to upload a `.txt` file containing the article or text you wish to analyze.
+2. **Keyword Extraction**:
+    - Select the number of top keywords to extract using the "Top N" entry box.
+    - Choose a model from the dropdown (e.g., TF-IDF, YAKE).
+    - The extracted keywords will be displayed in the scrollable text area below.
+3. **Topic Prediction**:
+    - Select the number of top topics to predict using the "Top N Topics" entry box.
+    - Choose a model from the dropdown (e.g., LDA, NMF).
+    - The predicted topics will be displayed in the scrollable text area below.
+4. **Domain Selection**: Choose a domain from the dropdown list to analyze specific domain-related topics and sentiments.
+5. **Bar Graphs**:
+    - The dashboard displays bar graphs of topics and sentiments based on the selected domain.
+6. **Predict**: Click the "Predict" button to trigger the prediction functionality (note: dummy functionality for now).
+
+
+
+
+
 ## Git Ignore
 The .gitignore file is located in the root folder and specifies files and directories that should not be tracked by Git. Make sure to review it to ensure all sensitive or unnecessary files are excluded from version control.
 
